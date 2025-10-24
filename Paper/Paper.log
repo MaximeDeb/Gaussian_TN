@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.4)  23 OCT 2025 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.4)  23 OCT 2025 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -515,64 +515,67 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
 (c:/texlive/2025/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-<Figs/Sketch/Sketch_circuit.pdf, id=17, 487.06325pt x 206.55873pt>
+<Figs/Sketch/Sketch_circuit.pdf, id=14, 487.06325pt x 206.55873pt>
 File: Figs/Sketch/Sketch_circuit.pdf Graphic file (type pdf)
 <use Figs/Sketch/Sketch_circuit.pdf>
-Package pdftex.def Info: Figs/Sketch/Sketch_circuit.pdf  used on input line 78.
+Package pdftex.def Info: Figs/Sketch/Sketch_circuit.pdf  used on input line 83.
 
 (pdftex.def)             Requested size: 483.69687pt x 205.14305pt.
-
-Underfull \hbox (badness 1158) in paragraph at lines 86--87
+ [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/20
+25/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 1158) in paragraph at lines 92--93
  \OT1/cmr/m/n/10 the in-stan-ta-neous or-bital ba-sis, $\OMS/cmsy/m/n/10 h\OML/
 cmm/m/it/10  \OMS/cmsy/m/n/10 j[]j\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 i \OT1/cmr
 /m/n/10 =
  []
 
-[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/202
-5/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<Figs/Sketch/Sketch_permutation.pdf, id=49, 487.05914pt x 182.60439pt>
+<Figs/Sketch/Sketch_permutation.pdf, id=48, 487.05914pt x 182.60439pt>
 File: Figs/Sketch/Sketch_permutation.pdf Graphic file (type pdf)
 <use Figs/Sketch/Sketch_permutation.pdf>
 Package pdftex.def Info: Figs/Sketch/Sketch_permutation.pdf  used on input line
- 91.
+ 97.
 (pdftex.def)             Requested size: 483.69687pt x 181.35286pt.
- (./Paper.bbl) [2 <./Figs/Sketch/Sketch_circuit.pdf>] [3 <./Figs/Sketch/Sketch_
-permutation.pdf>]
-(./Paper.aux)
+(./Paper.bbl) [2 <./Figs/Sketch/Sketch_circuit.pdf>] [3 <./Figs/Sketch/Sketch_p
+ermutation.pdf>] (./Paper.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: 73C464DBE89A95783829C5F6C7199D99;679.
+(rerunfilecheck)             Checksum: 2A2BCCA498B2F64F050FA6D6C506ED3B;509.
  ) 
 Here is how much of TeX's memory you used:
- 12806 strings out of 467888
- 189722 string characters out of 5438241
- 648048 words of memory out of 5000000
- 41190 multiletter control sequences out of 15000+600000
- 634161 words of font info for 70 fonts, out of 8000000 for 9000
+ 12808 strings out of 467888
+ 189780 string characters out of 5438241
+ 650048 words of memory out of 5000000
+ 41192 multiletter control sequences out of 15000+600000
+ 634353 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,79p,954b,563s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,79p,1130b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/doublestroke/dsrom1
-0.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Paper.pdf (3 pages, 230033 bytes).
+s/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9
+.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.p
+fb><c:/texlive/2025/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb><c:/
+texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Paper.pdf (3 pages, 241099 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 148 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  17 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 27 words of extra memory for PDF output out of 10000 (max. 10000000)
 

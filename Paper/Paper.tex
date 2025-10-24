@@ -53,10 +53,15 @@
 			\rho_{\mathrm{G}}^{} &= \frac{1}{2^{L}}\prod\limits_{j=1}^{2L}\left(\mathds{1} + i\lambda_{j} \tilde{\gamma}_{2j-1}^{} \tilde{\gamma}_{2j}^{} \right)
 		\end{split}
 	\end{equation}
-	This is valid in a given basis, where $n_j=\langle c^{\dagger}_j c^{}_j\rangle=(1+\lambda_j)/2$ are the occupations of orbital $j$, and are known from the diagonalization of the covariance matrix. STABILIZERS
-
-
-	We also have a	set of \emph{destabilizers} formed by the set of odd majorana modes:
+	This is valid in a given basis, where $n_j=\langle c^{\dagger}_j c^{}_j\rangle=(1+\lambda_j)/2$ are the occupations of orbital $j$, and are known from the diagonalization of the covariance matrix. From this set of rotated operators, we can define a set of $L$ \emph{stabilizers}, which together completely determine the stabilized state:
+	\begin{equation}
+		S_{i} = 
+		\begin{cases}
+			\tilde{n}_i \quad &\text{if} \quad \langle \tilde{n}_i \rangle = 1 \\
+			1 - \tilde{n}_i \quad &\text{if} \quad \langle \tilde{n}_i \rangle = 0 \\
+ 		\end{cases},
+	\end{equation}
+	such that $S_i|\psi_{\mathrm{G}}\rangle = +|\psi_{\mathrm{G}}\rangle$.  In order to define a complete basis of Gaussian states, we also define a set of \emph{destabilizers} formed by the set of odd majorana modes:
 	\begin{equation}
 	d^{}_i = \prod_{j=1}^{L}\tilde{\gamma}_{2j-1}^{\vec{b}_{i}(j)},
 	\end{equation}
@@ -64,37 +69,38 @@
 
 	When a Gaussian operation is applied on the state, we only obtain a basis which is defined as a linear combination of the \emph{stabilized} modes:
 	\begin{equation}
-		\tilde{\tilde{\gamma}}_j = \sum_{k=1}^{2L} R_{jk}\tilde{\gamma}_{k},
+		\tilde{\tilde{\gamma}}_j = \sum_{k=1}^{2L} G_{jk}\tilde{\gamma}_{k},
 	\end{equation}
 	which we call the \emph{instantaneous} basis and is identified with operators with double tildas. In this basis, the set of stabilizers
 	The basis of instantaneous natural orbitals can always be reconstructed through the rotated majoranas:
 	\begin{equation}
 		\tilde{\tilde{c}}_{j}^{} = \frac{1}{2}\left(\tilde{\tilde{\gamma}}_{2j-1} + i\,\tilde{\tilde{\gamma}}_{2j}\right),
 	\end{equation}
-	which form a set of \emph{stabilizers} that allows with the corresponding natural occupations to fully determine a Gaussian state.
+	which corresponds to the update of the \emph{stabilizers} and \emph{destabilizers}, which are non-local in the instantaneous basis. The non-locality of the destabilizers and thus of the basis of the MPS makes it complicated to apply a non-Gaussian gate of the type $\exp(-i\tilde{\tilde{n}}_a\tilde{\tilde{n}}_b)$ as it is decomposed over the entire basis of destabilizers. However, it is possible to apply a quantum circuit that rotates the MPS in order to isolate the modes $a$ and $b$ as the local modes of $2$ physical legs of the MPS. Such a rotation $\sigma$ is performed by applying a set of local Givens rotations, which will successively orthogonalize each local hilbert space to the modes $a$ and $b$. While it may seems that such a non-local operation could create as much entanglement as possible, we show in Fig.~\ref{fig:permutation} that it can at most create a logarithmic quantity of entanglement, $S(\sigma)\leq \log(L)$. This quantity depends on the entanglement created by the Gaussian operation, and for specific cases might create less than the maximum amount of entanglement. 
 
-	\begin{figure*}[t]
+	\begin{figure*}[t]q
 		\centering
 		\includegraphics[width=1.\textwidth]{Figs/Sketch/Sketch_circuit.pdf}
-		\caption{Sketch.}
+		\caption{Sketch. Blue operations applied as an orbital rotation and change the basis of the MPS. Red operations are applied as local gates on the MPS.}
 		\label{fig:sketch}
 	\end{figure*}
+
 	\emph{Algorithm}: Equipped with the GaMPS representation of the state that allows to span the entire Hilbert space, we present below how to apply a quantum circuit to the GaMPS.
 	\begin{itemize}
-		\item {\bf Gaussian operations}: Applying a Gaussian unitary $U_{\mathrm{G}}$ to the state is equivalent to update the basis of orbitals as $\tilde{\gamma}_j = \sum_{k=1}^{2L} G_{jk}\gamma_{k}$, as illustrated in Fig.~\ref{fig:sketch}. After each Gaussian operation, we update the orbital frame by successively multiplying the corresponding orthogonal transformations, thereby keeping track of the basis at all times. We dub this basis the instantaneous orbital basis, which defines the space spanned by physical legs in the associated MPS. Each stabilizer and destabilizer becomes non-local superposition of all orbitals. 
-		\item {\bf Non-Gaussian operations}: The set of odd Majoranas (our \emph{destabilizers}) together with the even ones  forms a complete operator basis, allowing any operator to be expressed as $U = \sum_{i} \phi_{i} s_{u_i}d_{v_i}$. However, the local basis being a superposition of all orbitals, decomposing a gate that is local in a basis different from the stabilized basis (such as the instantaneous one) becomes an all-to-all operation. However, if the gate is $k$-local in some basis, it is possible to build a circuit that extract these $k$ orbitals and makes them the local degrees of freedom of $k$ legs of the MPS. This sequence of operations is depicted in Fig.~\ref{fig:sketch}, where $\sigma$ is the non-local circuit that is applied to the MPS to make the non-Gaussian gate local. For a $2$-local gate, this circuit together with the non-Gaussian gate produce at most an amount $\log(L)$ of entropy.
+		\item {\bf Gaussian operations}: Applying a Gaussian unitary $U_{\mathrm{G}}$ to the state is equivalent to update the basis of orbitals as $\tilde{\tilde{\gamma}}_j = \sum_{k=1}^{2L} G_{jk}\tilde{\gamma}_{k}$, as illustrated in Fig.~\ref{fig:sketch}. After each Gaussian operation, we update the orbital frame by successively multiplying the corresponding orthogonal transformations, thereby keeping track of the basis at all times. We dub this basis the instantaneous orbital basis, which defines the space spanned by physical legs in the associated MPS. Each stabilizer and destabilizer becomes non-local superposition of all orbitals. 
+		\item {\bf Non-Gaussian operations}: The set of odd majoranas (our \emph{destabilizers}) together with the even ones  forms a complete operator basis, allowing any operator to be expressed as $U = \sum_{i} \phi_{i} s_{u_i}d_{v_i}$. However, the local basis being a superposition of all orbitals, decomposing a gate that is local in a basis different from the stabilized basis (such as the instantaneous one) becomes an all-to-all operation. However, if the gate is $k$-local in some basis, it is possible to build a circuit that extract these $k$ orbitals and makes them the local degrees of freedom of $k$ legs of the MPS. This sequence of operations is depicted in Fig.~\ref{fig:sketch}, where $\sigma$ is the non-local circuit that is applied to the MPS to make the non-Gaussian gate local. For a $2$-local gate, this circuit together with the non-Gaussian gate produce at most an amount $\log(L)$ of entropy.
 		\item {\bf Expectation values}: Expectation values are evaluated by decomposing the observable in the instantaneous orbital basis, $\langle \psi | \hat{O} | \psi \rangle = \sum_{k=1}^{L^{r}} a_{k}\langle \nu | \hat{O}_k | \nu \rangle$, where $a_k$ denotes the weight associated with the operator $\hat{O}_{k}$ and $r$ is the number of fermionic modes encoded in the observable. For instance, a density operator $n_\alpha$ can be expanded as $n_\alpha = \sum_{ij} R^{*}_{i\alpha} R_{\alpha j} \hat{\tilde{c}}^{\dagger}_{i}\hat{\tilde{c}}^{}_{j}$, so that $a_{ij} = R^{*}_{i\alpha} R_{\alpha j}$.
 	\end{itemize}
 	
 	\begin{figure*}[t]
 		\centering
 		\includegraphics[width=1.\textwidth]{Figs/Sketch/Sketch_permutation.pdf}
-		\caption{Sketch of the permutation circuit required for applying a local gate.}
+		\caption{Sketch of the permutation circuit required for applying a local gate. The circuit $\sigma$ makes the degrees of freedom of the gate that is to apply local in the MPS, and is expressed as a succession of local Givens rotations.}
 		\label{fig:permutation}
 	\end{figure*}
 
 
-	\section{Conclusion and outlook}
+	\emph{Conclusion and outlook}
 
 	%\textit{Acknowledgement}. The author thank Neil Dowling and Julien Bréhier for discussions. The author was supported by the Deutsche Forschungsgemeinschaft through the cluster of excellence ML4Q (EXC 2004, project-id 390534769) and by the Deutsche Forschungs- gemeinschaft through CRC 1639 NuMeriQS (project-id 511713970).
 
